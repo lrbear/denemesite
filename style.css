@@ -1,0 +1,361 @@
+/* TLEAN Ultimate */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #05070f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Matrix Canvas */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* Menü */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+/* Tema Butonu */
+#theme-toggle {
+    background: #00ff88;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+}
+
+#typing-text {
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+
+/* Glitch */
+.glitch {
+    position: relative;
+    color: white;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch::before {
+    color: red;
+    transform: translate(-2px, -2px);
+}
+
+.glitch::after {
+    color: cyan;
+    transform: translate(2px, 2px);
+}
+
+/* Buton */
+.hero-btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #00ff88;
+    color: black;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+}
+
+/* Bölümler */
+section {
+    padding: 100px 50px;
+}
+
+section h2 {
+    margin-bottom: 40px;
+}
+
+/* Oyunlar */
+.game-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+        minmax(250px,1fr));
+
+    gap: 25px;
+}
+
+.game-card {
+    background: rgba(255,255,255,.05);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    backdrop-filter: blur(15px);
+
+    transition: .3s;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.roblox {
+    border: 2px solid #00ff88;
+}
+
+.valorant {
+    border: 2px solid #ff4655;
+}
+
+.pubg {
+    border: 2px solid gold;
+}
+
+.brawl {
+    border: 2px solid #8a2be2;
+}
+
+/* Projeler */
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+        minmax(250px,1fr));
+
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255,255,255,.05);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 15px;
+
+    background: #00ff88;
+    color: black;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+}
+
+/* Contact */
+.contact-section {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.contact-title {
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: 15px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.contact-links a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.08);
+}
+
+.contact-form button {
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #00ff88;
+
+    color: black;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Back To Top */
+#backToTop {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #00ff88;
+
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: rgba(0,0,0,.6);
+}
+
+/* Mobil */
+@media (max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+}
